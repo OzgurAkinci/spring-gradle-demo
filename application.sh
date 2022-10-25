@@ -12,5 +12,5 @@ fi
 
 export JAVA_OPTIONS
 
-echo "Starting the Java application using /opt/run-java/run-java.sh ..."
-exec /opt/run-java/run-java.sh
+echo "Starting the Java application using /opt/jboss/container/java/run/run-java.sh ..."
+exec /opt/jboss/container/java/run/run-java.sh
