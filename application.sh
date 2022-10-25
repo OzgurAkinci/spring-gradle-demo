@@ -10,8 +10,6 @@ else
         JAVA_OPTIONS="$JAVA_OPTIONS -Dserver.port=8080"
 fi
 
-JAVA_OPTIONS = "$JAVA_OPTIONS $(/opt/jolokia/jolokia-opts)"
-
 export JAVA_OPTIONS
 
 echo "Starting the Java application using /opt/run-java/run-java.sh ..."
