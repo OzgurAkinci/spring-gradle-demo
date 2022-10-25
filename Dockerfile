@@ -1,14 +1,17 @@
 FROM registry.access.redhat.com/ubi8/openjdk-17
 
-ENV JAVA_APP_DIR="/deployments" \
-    JAVA_APP_JAR="${APP_NAME}.jar" \
-    JAVA_MAJOR_VERSION="17" \
-    TZ="Eurepa/Istanbul"
 
-#USER root
+# Refer to Maven build -> finalName
+ARG JAR_FILE=/build/libs/spring-gradle-demo-0.0.1-SNAPSHOT.jar
 
-#COPY --from=build /build/libs/spring-gradle-demo-*.jar /deployments/spring-gradle-demo.jar
+# cd /opt/app
+WORKDIR /opt/app
 
-COPY application.sh /deployments/application.sh
+EXPOSE 9090
 
-CMD ["sh", "/deployments/application.sh"]
+# cp target/spring-boot-web.jar /opt/app/app.jar
+COPY ${JAR_FILE} app.jar
+
+# java -jar /opt/app/app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
+
