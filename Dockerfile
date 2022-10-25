@@ -7,7 +7,7 @@ ENV JAVA_APP_DIR="/deployments" \
 
 
 
-RUN curl -o /deployments/${APP_NAME}.jar ${ARTIFACT_URL} --insecure
+COPY /build/libs/${APP_NAME}-*.jar /deployments/${APP_NAME}.jar
 
 COPY application.sh /deployments/application.sh
 
