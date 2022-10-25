@@ -5,6 +5,7 @@ ENV JAVA_APP_DIR="/deployments" \
     JAVA_MAJOR_VERSION="17" \
     TZ="Eurepa/Istanbul"
 
+USER root
 
 COPY --from=build /build/libs/spring-gradle-demo-*.jar /deployments/spring-gradle-demo.jar
 
