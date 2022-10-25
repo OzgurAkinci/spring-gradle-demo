@@ -9,9 +9,12 @@ version = '0.0.1-SNAPSHOT'
 
 apply plugin: 'application'
 sourceCompatibility = JavaVersion.VERSION_17
-
 ext {
-	mainClassName = 'com.app.springgradledemo.SpringGradleDemoApplication'
+	javaMainClass = "com.app.springgradledemo.SpringGradleDemoApplication"
+}
+
+application {
+	mainClassName = javaMainClass
 }
 
 repositories {
