@@ -7,7 +7,7 @@ ENV JAVA_APP_DIR="/deployments" \
 
 
 
-COPY /build/libs/${APP_NAME}-*.jar /deployments/${APP_NAME}.jar
+#COPY /build/libs/${APP_NAME}-*.jar /deployments/${APP_NAME}.jar
 
 COPY application.sh /deployments/application.sh
 
