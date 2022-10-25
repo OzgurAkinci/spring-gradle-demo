@@ -3,10 +3,8 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 	id 'java'
 }
-
 group = 'com.app'
 version = '0.0.1-SNAPSHOT'
-
 sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {

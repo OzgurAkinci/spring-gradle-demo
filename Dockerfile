@@ -1,17 +1,8 @@
-FROM registry.access.redhat.com/ubi8/openjdk-17
+FROM adoptopenjdk/openjdk11:alpine-jre
 
+ARG APP_NAME="spring-gradle-demo"
+ARG APP_VERSION="0.0.1"
+ARG JAR_FILE="/build/libs/${APP_NAME}-${APP_VERSION}.jar"
 
-# Refer to Maven build -> finalName
-ARG JAR_FILE=/build/libs/spring-gradle-demo-0.0.1-SNAPSHOT.jar
-
-# cd /opt/app
-WORKDIR /opt/app
-
-EXPOSE 9090
-
-# cp target/spring-boot-web.jar /opt/app/app.jar
 COPY ${JAR_FILE} app.jar
-
-# java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
-
+ENTRYPOINT ["java","-jar", "app.jar"]
