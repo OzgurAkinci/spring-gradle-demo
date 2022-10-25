@@ -8,8 +8,11 @@ group = 'com.app'
 version = '0.0.1-SNAPSHOT'
 
 apply plugin: 'application'
-mainClassName = 'com.app.springgradledemo.SpringGradleDemoApplication'
 sourceCompatibility = JavaVersion.VERSION_17
+
+ext {
+	mainClassName = 'com.app.springgradledemo.SpringGradleDemoApplication'
+}
 
 repositories {
 	mavenCentral()
