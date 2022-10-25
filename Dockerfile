@@ -5,9 +5,6 @@ ENV JAVA_APP_DIR="/deployments" \
     JAVA_MAJOR_VERSION="11" \
     TZ="Eurepa/Istanbul"
 
-RUN curl -o /deployments/${APP_NAME}.jar ${ARTIFACT_URL} --insecure
-
-RUN chown /deployments/${APP_NAME}.jar
 COPY application.sh /deployments/application.sh
 
 CMD ["sh", "/deployments/application.sh"]
