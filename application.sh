@@ -12,4 +12,4 @@ fi
 
 
 echo "Starting the Java application using /opt/run-java/run-java.sh ..."
-exec /opt/run-java/run-java.sh
+#exec /opt/run-java/run-java.sh
