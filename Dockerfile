@@ -6,7 +6,7 @@ ENV JAVA_APP_DIR="/deployments" \
     TZ="Eurepa/Istanbul"
 
 
-COPY /build/libs/spring-gradle-demo.jar /deployments/spring-gradle-demo.jar
+COPY --from=build /build/libs/spring-gradle-demo.jar /deployments/spring-gradle-demo.jar
 
 COPY application.sh /deployments/application.sh
 
