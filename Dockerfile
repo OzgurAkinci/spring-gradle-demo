@@ -5,6 +5,6 @@ ENV JAVA_APP_DIR="/deployments" \
     JAVA_MAJOR_VERSION="11" \
     TZ="Eurepa/Istanbul"
 
-COPY application.sh /deployments/application.sh
+#COPY application.sh /deployments/application.sh
 
-CMD ["sh", "/deployments/application.sh"]
+#CMD ["sh", "/deployments/application.sh"]
