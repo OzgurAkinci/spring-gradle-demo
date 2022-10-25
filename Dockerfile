@@ -7,4 +7,4 @@ ENV JAVA_APP_DIR="/deployments" \
 
 COPY application.sh /deployments/application.sh
 
-#CMD ["sh", "/deployments/application.sh"]
+CMD ["sh", "/deployments/application.sh"]
