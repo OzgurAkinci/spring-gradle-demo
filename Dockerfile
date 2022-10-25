@@ -7,8 +7,8 @@ ENV JAVA_APP_DIR="/deployments" \
 
 
 
-COPY /build/libs/spring-gradle-demo.jar /deployments/spring-gradle-demo.jar
+#COPY /build/libs/spring-gradle-demo.jar /deployments/spring-gradle-demo.jar
 
-COPY application.sh /deployments/application.sh
+#COPY application.sh /deployments/application.sh
 
-CMD ["sh", "/deployments/application.sh"]
+#CMD ["sh", "/deployments/application.sh"]
